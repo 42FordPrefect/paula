@@ -1,0 +1,14 @@
+connectors: 
+  matrix:
+    # Required
+    mxid: "@pauladiepalme:matrix.org"
+    password: "2SwFHOm4CpLOiTgMCWyOVhUIC"
+    rooms:
+      'main': '#paulapaelmchen:matrix.org'
+      #'other': '!vpAnpBGDJwWbpaYZKS:matrix.org' doesn't work without olm --> docker on py
+    # Optional
+    homeserver: "https://matrix.org"
+        
+skills:
+  wie_gehts:
+    path: /home/pi/.config/opsdroid/wie_gehts.py 
