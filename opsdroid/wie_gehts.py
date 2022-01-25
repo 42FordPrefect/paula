@@ -19,17 +19,17 @@ class HelloByeSkill(Skill):
 
     @match_regex(r'wie geht', case_sensitive=False)
     async def wie_gehts(self, message):
-        msg1 = await subscribe.simple("paula/erde",hostname="localhost").payload.decode('utf-8')
+        msg1 =  subscribe.simple("paula/erde",hostname="localhost").payload.decode('utf-8')
         await message.respond(msg1)
 
 
     @match_regex(r'wie warm', case_sensitive=False)
     async def wie_warm(self, message):
-        msg2 = await subscribe.simple("paula/temp", hostname="localhost").payload.decode('utf-8')
+        msg2 =  subscribe.simple("paula/temp", hostname="localhost").payload.decode('utf-8')
         await message.respond(msg2)
 
 
     @match_regex(r'Luftfeuchtigkeit', case_sensitive=False)
     async def wie_humid(self, message):
-        msg3 = await subscribe.simple("paula/luftfeuchtigkeit", hostname="localhost").payload.decode('utf-8')
+        msg3 =  subscribe.simple("paula/luftfeuchtigkeit", hostname="localhost").payload.decode('utf-8')
         await message.respond(msg3)
